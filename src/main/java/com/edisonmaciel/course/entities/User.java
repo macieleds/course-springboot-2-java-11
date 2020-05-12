@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 @Entity
 @Table(name = "tb_user")
 public class User implements Serializable{
@@ -25,6 +28,7 @@ public class User implements Serializable{
 	private String password;
 	
 	@OneToMany(mappedBy = "client")
+	@Fetch(FetchMode.JOIN) 
 	private List<Order> orders = new ArrayList<>();
 	
 	public User () {
@@ -112,6 +116,8 @@ public class User implements Serializable{
 			return false;
 		return true;
 	}
+
+
 
 
 	
