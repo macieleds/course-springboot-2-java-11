@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "tb_user")
 public class User implements Serializable{
@@ -27,6 +29,8 @@ public class User implements Serializable{
 	private String phone;
 	private String password;
 	
+	
+	@JsonIgnore
 	@OneToMany(mappedBy = "client")
 	@Fetch(FetchMode.JOIN) 
 	private List<Order> orders = new ArrayList<>();
