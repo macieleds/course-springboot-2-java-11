@@ -1,4 +1,4 @@
-package com.edisonmaciel.course.entities;
+package com.edisonmaciel.comercioprodutos.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;

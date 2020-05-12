@@ -1,4 +1,4 @@
-package com.edisonmaciel.course.resources;
+package com.edisonmaciel.comercioprodutos.resources;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edisonmaciel.course.entities.Product;
-import com.edisonmaciel.course.services.ProductService;
+import com.edisonmaciel.comercioprodutos.entities.Product;
+import com.edisonmaciel.comercioprodutos.services.ProductService;
 
 @RestController
 @RequestMapping(value="/products")

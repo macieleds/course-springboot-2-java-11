@@ -1,4 +1,4 @@
-package com.edisonmaciel.course.resources;
+package com.edisonmaciel.comercioprodutos.resources;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edisonmaciel.course.entities.Order;
-import com.edisonmaciel.course.services.OrderService;
+import com.edisonmaciel.comercioprodutos.entities.Order;
+import com.edisonmaciel.comercioprodutos.services.OrderService;
 
 @RestController
 @RequestMapping(value="/orders")

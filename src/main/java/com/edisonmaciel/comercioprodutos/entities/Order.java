@@ -1,4 +1,4 @@
-package com.edisonmaciel.course.entities;
+package com.edisonmaciel.comercioprodutos.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.edisonmaciel.course.entities.enums.OrderStatus;
+import com.edisonmaciel.comercioprodutos.entities.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity

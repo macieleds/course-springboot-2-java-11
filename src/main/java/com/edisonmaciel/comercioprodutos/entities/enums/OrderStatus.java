@@ -1,4 +1,4 @@
-package com.edisonmaciel.course.entities.enums;
+package com.edisonmaciel.comercioprodutos.entities.enums;
 
 public enum OrderStatus {
 	

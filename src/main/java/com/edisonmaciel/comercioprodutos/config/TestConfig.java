@@ -1,4 +1,4 @@
-package com.edisonmaciel.course.config;
+package com.edisonmaciel.comercioprodutos.config;
 
 import java.time.Instant;
 import java.util.Arrays;
@@ -8,15 +8,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.edisonmaciel.course.entities.Category;
-import com.edisonmaciel.course.entities.Order;
-import com.edisonmaciel.course.entities.Product;
-import com.edisonmaciel.course.entities.User;
-import com.edisonmaciel.course.entities.enums.OrderStatus;
-import com.edisonmaciel.course.repositories.CategoryRepository;
-import com.edisonmaciel.course.repositories.OrderRepository;
-import com.edisonmaciel.course.repositories.ProductRepository;
-import com.edisonmaciel.course.repositories.UserRepository;
+import com.edisonmaciel.comercioprodutos.entities.Category;
+import com.edisonmaciel.comercioprodutos.entities.Order;
+import com.edisonmaciel.comercioprodutos.entities.Product;
+import com.edisonmaciel.comercioprodutos.entities.User;
+import com.edisonmaciel.comercioprodutos.entities.enums.OrderStatus;
+import com.edisonmaciel.comercioprodutos.repositories.CategoryRepository;
+import com.edisonmaciel.comercioprodutos.repositories.OrderRepository;
+import com.edisonmaciel.comercioprodutos.repositories.ProductRepository;
+import com.edisonmaciel.comercioprodutos.repositories.UserRepository;
 
 @Configuration
 @Profile("test")

@@ -1,13 +1,13 @@
-package com.edisonmaciel.course;
+package com.edisonmaciel.comercioprodutos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CourseApplication {
+public class ComercioProdutosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CourseApplication.class, args);
+		SpringApplication.run(ComercioProdutosApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.edisonmaciel.course.services;
+package com.edisonmaciel.comercioprodutos.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.edisonmaciel.course.entities.Order;
-import com.edisonmaciel.course.repositories.OrderRepository;
+import com.edisonmaciel.comercioprodutos.entities.Order;
+import com.edisonmaciel.comercioprodutos.repositories.OrderRepository;
 
 @Service
 public class OrderService {
