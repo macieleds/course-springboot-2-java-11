@@ -6,4 +6,5 @@ import com.edisonmaciel.comercioprodutos.entities.User;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 
+
 }
