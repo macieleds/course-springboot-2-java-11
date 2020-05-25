@@ -3,6 +3,7 @@ package com.edisonmaciel.comercioprodutos.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.LazyInitializationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -32,22 +33,26 @@ public class UserService {
 		return repository.save(obj);
 	}
 
-	public void delete (Long id) {
+	public void delete(Long id) {
 		try {
-			
+
 			repository.deleteById(id);
 		} catch (EmptyResultDataAccessException e) {
 			throw new ResourceNotFoundException(id);
 		} catch (DataIntegrityViolationException e) {
 			throw new DatabaseException(e.getMessage());
 		}
-		
+
 	}
 
 	public User update(Long id, User obj) {
-		User entity = repository.getOne(id);
-		updateData(entity, obj);
-		return repository.save(entity);
+		try {
+			User entity = repository.getOne(id);
+			updateData(entity, obj);
+			return repository.save(entity);
+		} catch (LazyInitializationException e) {
+			throw new ResourceNotFoundException(id);
+		}
 	}
 
 	private void updateData(User entity, User obj) {
