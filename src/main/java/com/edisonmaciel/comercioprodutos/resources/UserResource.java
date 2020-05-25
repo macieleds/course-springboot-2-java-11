@@ -2,6 +2,7 @@ package com.edisonmaciel.comercioprodutos.resources;
 
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.edisonmaciel.comercioprodutos.dto.UserDTO;
 import com.edisonmaciel.comercioprodutos.entities.User;
 import com.edisonmaciel.comercioprodutos.services.UserService;
 
@@ -27,17 +29,18 @@ public class UserResource {
 	
 	
 	@GetMapping
-	public ResponseEntity<List<User>> findAll(){
-	
+	public ResponseEntity<List<UserDTO>> findAll(){
 		List<User> list = service.findAll();
-		return ResponseEntity.ok().body(list);
+		List<UserDTO> listDTO = list.stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
+		return ResponseEntity.ok().body(listDTO);
 		
 	}
 	
 	@GetMapping(value="/{id}")
-	public ResponseEntity<User> findById(@PathVariable Long id){
+	public ResponseEntity<UserDTO> findById(@PathVariable Long id){
 		User obj = service.findById(id);
-		return ResponseEntity.ok().body(obj);
+		UserDTO userDTO = new UserDTO(obj);
+		return ResponseEntity.ok().body(userDTO);
 	}
 	
 	@PostMapping
